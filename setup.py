@@ -38,6 +38,7 @@ setup(
     maintainer=AUTHOR,
     description=DESCRIPTION,
     long_description=readme,
+    long_description_content_type="text/markdown",
     url=URL,
     download_url=URL,
     python_requires=PYTHON_REQUIRES,
