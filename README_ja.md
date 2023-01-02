@@ -47,11 +47,11 @@ data = sct.connect(Lang.JAPANESE, Sort.POPULAR)
 (まだ開発途中のため、ショボいです)
 ```python
 data.get_by_page()  # ページを指定して取得
-data.get_by_num()  # 順位(←少し語弊があります)を指定して取得
+data.get_by_num()  # 順位を指定して取得
 ```
 ```get_by_page()```メソッドはstart引数からend引数のページの作品を取得します。必ず start&lt;endとなるようにしてください。<br />
 ```get_by_num()```メソッドはstart引数からend引数の順位の作品を取得します。こちらもstart&lt;endとなるようにしてください。
-##### "順位"という言い方には少し語弊があります。良い言い方があったらIssuesまで。
+##### "順位"という言い方には少し語弊があります。良い言い方があったらIssuesまでお願いします。
 <br />
 
 **返り値**
@@ -78,10 +78,9 @@ data.get_by_num()  # 順位(←少し語弊があります)を指定して取得
 ## ライセンス
 ScratchTrendはMITライセンスです。
 ## クレジット
-<div>ロゴは<a href="https://www.designevo.com/jp/" title="無料オンラインロゴメーカー">DesignEvo</a> を使用しました。</div>
+- ロゴは<a href="https://www.designevo.com/jp/" title="無料オンラインロゴメーカー">DesignEvo</a> を使用しました。
+- [**Selenium**](https://github.com/SeleniumHQ/selenium)
+- [**BeautifulSoup**](https://www.crummy.com/software/BeautifulSoup/)
 
-[**Selenium**](https://github.com/SeleniumHQ/selenium)
-
-[**BeautifulSoup**](https://www.crummy.com/software/BeautifulSoup/)
 ## 連絡
 もしバグを発見した場合は、[Issue](https://github.com/henji243/ScratchTrend/issues)または[Scratch](https://scratch.mit.edu/projects/753404201/)まで。

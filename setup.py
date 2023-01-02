@@ -2,7 +2,7 @@ from setuptools import setup
 import scratchtrend
 
 NAME = "scratchtrend"
-DESCRIPTION = "scratchtrend: Get Popular Projects from scratch"
+DESCRIPTION = "ScratchTrend: Get Popular Projects from scratch"
 AUTHOR = "ujex_256(henji243)"
 URL = "https://github.com/henji243/ScratchTrend"
 
