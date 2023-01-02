@@ -23,9 +23,7 @@ class ScratchTrendData:
         self._visible_window = visible_window
 
     def __setup(self):
-        """Chromeの起動などをします。
-        Run Chrome.
-        """
+        """Run Chrome."""
         options = webdriver.ChromeOptions()
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
         if self._visible_window:
