@@ -5,9 +5,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
 try:
     import chromedriver_binary
-    driver_installed = True
+    driverbinary_installed = True
+    cdm_installed = False
 except:
-    driver_installed = False
+    try:
+        from webdriver_manager.chrome import ChromeDriverManager as cdm
+        driverbinary_installed = False
+        cdm_installed = True
+    except:
+        driverbinary_installed = False
+        cdm_installed = False
 
 from .select import Lang, Sort
 
@@ -36,8 +43,10 @@ class ScratchTrendData:
         if self._visible_window:
             options.add_argument("--headless")
 
-        if driver_installed:
+        if driverbinary_installed:
             driver = webdriver.Chrome(options=options)
+        elif cdm_installed:
+            driver = webdriver.Chrome(cdm().install(), options=options)
         else:
             driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
         driver.get("https://scratch.mit.edu/")
