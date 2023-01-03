@@ -4,7 +4,7 @@
 [![PyPI](https://img.shields.io/badge/PyPI-dummy?style=for-the-badge&logo=pypi&labelColor=gray&color=red)](https://pypi.org/project/scratchtrend/)
 [![GitHub](https://img.shields.io/badge/GitHub-dummy?style=for-the-badge&logo=github&labelColor=gray&color=blue)](https://github.com/henji243/ScratchTrend)
 
-[![Licence](https://img.shields.io/github/license/henji243/ScratchTrend)](https://github.com/henji243/ScratchTrend)
+[![License](https://img.shields.io/github/license/henji243/ScratchTrend)](https://github.com/henji243/ScratchTrend)
 [![Downloads](https://img.shields.io/pypi/dd/scratchtrend?color=%2383ccd2&label=PyPI%20Downloads&logo=PyPI&logoColor=%2383ccd2)](https://pypi.org/project/scratchtrend)
 
 ScratchTrendは、https://scratch.mit.edu/explore から、人気の作品を取得します。
