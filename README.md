@@ -28,7 +28,7 @@ from scratchtrend.select import Lang, Sort
 - Selenium
 - BeautifulSoup
 
-**Recommended Libraryes**
+**Recommended Libraries**
 - chromedriver_binary
 - webdriver_manager
 
