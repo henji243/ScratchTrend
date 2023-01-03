@@ -45,7 +45,6 @@ class ScratchTrendData:
         driver.get(f"https://scratch.mit.edu/explore/projects/all/{self.mode}")
 
         self.__wait_by_css(driver, "#projectBox>div>div>div:nth-child(16)>div>div>a")
-
         return driver
 
     def __wait_by_css(self, driver: webdriver.Chrome, element: str) -> None:
@@ -53,7 +52,7 @@ class ScratchTrendData:
         ec = EC.presence_of_element_located((By.CSS_SELECTOR, element))
         wait.until(ec)
 
-    def get_by_rank(self, start: int, end: int) -> list:
+    def get_by_rank(self, start: int, end: int) -> list[dict]:
         """Obtain by specifying the rank.
 
         Args:
