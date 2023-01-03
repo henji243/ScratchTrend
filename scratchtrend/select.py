@@ -1,7 +1,4 @@
-import enum
-
-
-class Lang(object):
+class Lang:
     ABKHAZIAN = "ab"
     AFRIKAANS = "af"
     ARABIC = "ar"
@@ -82,7 +79,7 @@ class Lang(object):
     SIMPLIFIED_CHINESE = "zh-cn"
     TRADITIONAL_CHINESE = "zh-tw"
 
-class Sort(object):
+class Sort:
     TRENDING = "trending"
     POPULAR = "popular"
     RECENT = "recent"
