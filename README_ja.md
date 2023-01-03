@@ -22,13 +22,26 @@ $ pip install scratchtrend
 import scratchtrend as sct
 from scratchtrend.select import Lang, Sort
 ```
-**必要なモジュール**
+**必須ライブラリ・アプリ**
 - Selenium
 - BeautifulSoup
-- chromedriver_binary (自動でchromedriverのPathを通してくれます)
+- GoogleChrome
+
+**推奨ライブラリ**
+- chromedriver_binary
+- webdriver_manager
+
+上記のどれか一つがインストールされていると、ChromeDriverのパスを自動で通してくれます。
 <br /><br />
 
 ## 準備
+```python
+sct.CHROMEDRIVER_PATH = "chromedriverのパス"
+```
+もし推奨ライブラリのいずれかが入っていない場合はここで指定することができます。
+(インストールされていればこれは無視されます。)
+
+
 ```python
 # example
 data = sct.connect(Lang.JAPANESE, Sort.POPULAR)
@@ -79,8 +92,9 @@ data.get_by_num()  # 順位を指定して取得
 ScratchTrendはMITライセンスです。
 ## クレジット
 - ロゴは<a href="https://www.designevo.com/jp/" title="無料オンラインロゴメーカー">DesignEvo</a> を使用しました。
-- [**Selenium**](https://github.com/SeleniumHQ/selenium)
-- [**BeautifulSoup**](https://www.crummy.com/software/BeautifulSoup/)
+- [Selenium](https://github.com/SeleniumHQ/selenium)
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+- [GoogleChrome](https://chrome.com/)
 
 ## 連絡
 もしバグを発見した場合は、[Issue](https://github.com/henji243/ScratchTrend/issues)または[Scratch](https://scratch.mit.edu/projects/753404201/)まで。
