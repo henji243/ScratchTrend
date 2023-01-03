@@ -3,11 +3,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import chromedriver_binary
+try:
+    import chromedriver_binary
+    driver_installed = True
+except:
+    driver_installed = False
 
 from .select import Lang, Sort
+
 from math import ceil
 
+
+CHROMEDRIVER_PATH = ""
 
 class ScratchTrendData:
     """Use Selenium to retrieve popular works in Scratch.
@@ -29,8 +36,11 @@ class ScratchTrendData:
         if self._visible_window:
             options.add_argument("--headless")
 
-        driver = webdriver.Chrome(options=options)
-        driver.get("https://scratch.mit.edu/explore/projects/all")
+        if driver_installed:
+            driver = webdriver.Chrome(options=options)
+        else:
+            driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, options=options)
+        driver.get("https://scratch.mit.edu/")
         driver.add_cookie(self.__cookie)
         driver.get(f"https://scratch.mit.edu/explore/projects/all/{self.mode}")
 
@@ -124,7 +134,7 @@ class ScratchTrendData:
             found = soup.select_one(selector)
             project_data = {
                 "title": found.text,
-                "id": int(found.attrs["href"].replace("/", "").replace("projects", "")),
+                "id": int(found.attrs["href"].replace("/", "").replace("projects", ""))
             }
             trend.append(project_data)
 
