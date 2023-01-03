@@ -119,7 +119,7 @@ class ScratchTrendData:
         """
 
         if start > end:
-            raise ValueError("The start argument should be smaller than the end argument.")
+            raise ValueError("The \"start\" argument should be smaller than the \"end\" argument.")
 
         driver = self.__setup()
         # 指定されたページが2P以上なら表示させる
