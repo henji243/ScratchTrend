@@ -1,10 +1,13 @@
+import enum
+
+
 class Lang(object):
     ABKHAZIAN = "ab"
     AFRIKAANS = "af"
     ARABIC = "ar"
     AMHARIC = "am"
     ARAGONESE = "an"
-    ASTURIAN = "ast"
+    ASTURIANU = "ast"
     AZERBAIJANI = "az"
     INDONESIAN = "id"
     BENGALI = "bn"

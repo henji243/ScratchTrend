@@ -7,7 +7,7 @@ from scratchtrend.select import Lang
 |  ----  |  ----  |  ----  |  ----  |
 |  Аҧсшәа  |  Lang.ABKHAZIAN  |  Afrikaans  |  Lang.AFRIKAANS  |
 |  العربية  |  Lang.ARABIC  |  አማርኛ  |  Lang.AMHARIC  |
-|  Aragonés  |  Lang.ARAGONESE  |  Asturianu  |  Lang.ASTURIAN  |
+|  Aragonés  |  Lang.ARAGONESE  |  Asturianu  |  Lang.ASTURIANU  |
 |  Azeri  |  Lang.AZERBAIJANI  |  Bahasa Indonesia  |  Lang.INDONESIAN  |
 |  বাংলা  |  Lang.BENGALI  |  Беларуская  |  Lang.BELARUSIAN  |
 |  Български  |  Lang.BULGARIAN  |  Català  |  Lang.CATALAN  |
