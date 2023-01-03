@@ -78,11 +78,12 @@ class ScratchTrendData:
         if start > end:
             raise ValueError("The start argument should be smaller than the end argument.")
         driver = self.__setup()
+        more = more
 
         # 指定された順位が1Pより下のときの処理
         if end - start >= 17:
             for _ in range(ceil((end - start) / 16)):
-                driver.find_element(By.XPATH, '//*[@id="projectBox"]/button').click()
+                more.click()
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
         trend = list()
@@ -90,7 +91,7 @@ class ScratchTrendData:
         for i in range(start, end):
             selector = f"#projectBox>div>div>div:nth-of-type({i})>div>div>a"
             if i % 17 == 0:
-                driver.find_element(By.XPATH, '//*[@id="projectBox"]/button').click()
+                more.click()
 
                 self.__wait_by_css(driver, selector)
                 soup = BeautifulSoup(driver.page_source, "html.parser")
@@ -122,10 +123,11 @@ class ScratchTrendData:
             raise ValueError("The \"start\" argument should be smaller than the \"end\" argument.")
 
         driver = self.__setup()
+        more = driver.find_element(By.XPATH, '//*[@id="projectBox"]/button')
         # 指定されたページが2P以上なら表示させる
         if start >= 2:
             for _ in range(start - 1):
-                driver.find_element(By.XPATH, '//*[@id="projectBox"]/button').click()
+                more.click()
 
         soup = BeautifulSoup(driver.page_source, "html.parser")
         trend = list()
@@ -133,7 +135,7 @@ class ScratchTrendData:
         for i in range((start - 1) * 16 + 1, end * 16 + 1):
             selector = f"#projectBox>div>div>div:nth-of-type({i})>div>div>a"
             if i % 16 == 0:
-                driver.find_element(By.XPATH, '//*[@id="projectBox"]/button').click()
+                more.click()
 
                 self.__wait_by_css(driver, selector.replace(str(i), str(i + 1)))
                 soup = BeautifulSoup(driver.page_source, "html.parser")
