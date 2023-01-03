@@ -7,12 +7,12 @@ try:
     import chromedriver_binary
     driverbinary_installed = True
     cdm_installed = False
-except:
+except ModuleNotFoundError:
     try:
         from webdriver_manager.chrome import ChromeDriverManager as cdm
         driverbinary_installed = False
         cdm_installed = True
-    except:
+    except ModuleNotFoundError:
         driverbinary_installed = False
         cdm_installed = False
 
