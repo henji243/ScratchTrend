@@ -78,7 +78,7 @@ class ScratchTrendData:
         if start > end:
             raise ValueError("The start argument should be smaller than the end argument.")
         driver = self.__setup()
-        more = more
+        more = driver.find_element(By.XPATH, '//*[@id="projectBox"]/button')
 
         # 指定された順位が1Pより下のときの処理
         if end - start >= 17:
